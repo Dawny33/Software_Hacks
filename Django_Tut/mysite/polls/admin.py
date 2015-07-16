@@ -5,7 +5,7 @@ from .models import Choice, Question
 
 #For enabling to add choices when creating questions.
 #class ChoiceInline(admin.StackedInline):  #For displaying inline
-class ChoiceInline(admin.TabularInline):  #Neatly stacked; pccupies lesser space.
+class ChoiceInline(admin.TabularInline):  #Neatly stacked; occupies lesser space.
     model = Choice
     extra = 3
 
@@ -31,6 +31,7 @@ class QuestionAdmin(admin.ModelAdmin):
 
     #For adding choices.
     inlines = [ChoiceInline]
+    
 
 
 
